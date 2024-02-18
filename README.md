@@ -8,4 +8,4 @@ Github repo URL: https://github.com/KimRachk/Oblig-1
 Fullt Navn : Kim Ahmad Rachk
 
 Beskrivelse:
-Kino billett applikasjon.
+Kino billett applikasjon obligatorisk oppgave 1.
