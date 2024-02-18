@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobilletter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Added this to ensure padding doesn't affect width */
+        }
+        button {
+            background-color: #5c85d6;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3a5f9e;
+        }
+        .billett-liste {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Bestilling av kinobilletter</h1>
+    <form id="ticketForm">
+        <label for="film">Velg film:</label>
+        <select id="film" required>
+            <option value="">Velg film her</option>
+            <option value="reisen_til_maanens_bakside">Reisen til Månens Bakside</option>
+            <option value="eventyr_i_eventyrland">Eventyr i Eventyrland</option>
+            <option value="mysteriet_i_skumring">Mysteriet i Skumring</option>
+            <option value="robotenes_oppror">Robotenes Opprør</option>
+            <option value="kodenavn_fremtiden">Kodenavn: Fremtiden</option>
+        </select>
+
+        <label for="antall">Antall:</label>
+        <input id="antall" type="number" required>
+
+        <label for="fornavn">Fornavn:</label>
+        <input id="fornavn" type="text" required>
+
+        <label for="etternavn">Etternavn:</label>
+        <input id="etternavn" type="text" required>
+
+        <label for="telefonnr">Telefonnr:</label>
+        <input id="telefonnr" type="tel" required>
+
+        <label for="epost">Epost:</label>
+        <input id="epost" type="email" required>
+
+        <button type="button" onclick="kjopBillett()">Kjøp billett</button>
+    </form>
+
+    <div class="billett-liste" id="billettListe">
+        <h2>Alle billetter</h2>
+        <!-- Billettene vil bli lagt til her -->
+    </div>
+    <button type="button" onclick="slettAlleBilletter()">Slett alle billettene</button>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
